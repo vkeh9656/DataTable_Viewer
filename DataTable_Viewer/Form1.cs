@@ -89,6 +89,33 @@ namespace DataTable_Viewer
             RefreshView(); // index 갱신을 위한 이벤트 함수 호출
         }
 
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(tboxRegName.Text))
+            {
+                foreach (DataRow oItem in _ds.Tables[cboxRegClass.Text].Rows)
+                {
+                    if (oItem["COL_NAME"].Equals(tboxRegName.Text))
+                    {
+                        if(rdoRegSexFemale.Checked)
+                        {
+                            oItem["COL_SEX"] = "여자";
+                        }
+                        else
+                        {
+                            oItem["COL_SEX"] = "남자";
+                        }
+
+                        oItem["COL_REF"] = tboxRegREF.Text;
+                    }
+                }
+
+                RefreshView();
+            }
+
+        }
+
         private void btnViewDataDelete_Click(object sender, EventArgs e)
         {
             int iSelectRow = dgViewInfo.SelectedRows[0].Index;
@@ -115,5 +142,6 @@ namespace DataTable_Viewer
             }
             dgViewInfo.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
+
     }
 }

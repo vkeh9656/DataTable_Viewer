@@ -45,6 +45,7 @@
             this.cboxViewClass = new System.Windows.Forms.ComboBox();
             this.dgViewInfo = new System.Windows.Forms.DataGridView();
             this.btnViewDataDelete = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnModify);
             this.groupBox1.Controls.Add(this.btnReg);
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -247,6 +249,16 @@
             this.btnViewDataDelete.UseVisualStyleBackColor = true;
             this.btnViewDataDelete.Click += new System.EventHandler(this.btnViewDataDelete_Click);
             // 
+            // btnModify
+            // 
+            this.btnModify.Location = new System.Drawing.Point(138, 139);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
+            this.btnModify.TabIndex = 3;
+            this.btnModify.Text = "수정";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -286,6 +298,7 @@
         private System.Windows.Forms.ComboBox cboxViewClass;
         private System.Windows.Forms.Button btnViewDataDelete;
         private System.Windows.Forms.DataGridView dgViewInfo;
+        private System.Windows.Forms.Button btnModify;
     }
 }
 
