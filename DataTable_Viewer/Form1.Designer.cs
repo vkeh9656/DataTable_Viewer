@@ -71,6 +71,7 @@
             this.btnReg.TabIndex = 1;
             this.btnReg.Text = "등록";
             this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -190,7 +191,7 @@
             "3반"});
             this.cboxRegClass.Location = new System.Drawing.Point(73, 3);
             this.cboxRegClass.Name = "cboxRegClass";
-            this.cboxRegClass.Size = new System.Drawing.Size(212, 20);
+            this.cboxRegClass.Size = new System.Drawing.Size(170, 20);
             this.cboxRegClass.TabIndex = 7;
             this.cboxRegClass.Text = "1반";
             // 
@@ -223,8 +224,9 @@
             "3반"});
             this.cboxViewClass.Location = new System.Drawing.Point(6, 20);
             this.cboxViewClass.Name = "cboxViewClass";
-            this.cboxViewClass.Size = new System.Drawing.Size(121, 20);
+            this.cboxViewClass.Size = new System.Drawing.Size(75, 20);
             this.cboxViewClass.TabIndex = 0;
+            this.cboxViewClass.SelectedIndexChanged += new System.EventHandler(this.cboxViewClass_SelectedIndexChanged);
             // 
             // dgViewInfo
             // 
@@ -243,6 +245,7 @@
             this.btnViewDataDelete.TabIndex = 2;
             this.btnViewDataDelete.Text = "삭제";
             this.btnViewDataDelete.UseVisualStyleBackColor = true;
+            this.btnViewDataDelete.Click += new System.EventHandler(this.btnViewDataDelete_Click);
             // 
             // Form1
             // 
